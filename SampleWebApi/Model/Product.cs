@@ -7,10 +7,10 @@ using System.Threading.Tasks;
 
 namespace SampleWebApi.Model
 {
-    [Table("Product")]
+    [Table("Product")] // mapping of Table Product with class product
     public class Product
     {
-        [Key]
+        [Key] // primary key col
         public int Id { get; set; }
         public string Name { get; set; }
         public decimal Price { get; set; }

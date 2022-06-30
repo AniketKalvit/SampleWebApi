@@ -39,11 +39,12 @@ namespace SampleWebApi.Repositories
 
         public IEnumerable<Product> GetAllProducts()
         {
-           return context.Products.ToList();
+            return context.Products.ToList();
         }
 
-        public int ModifyProduct(Product prod)
+        public int ModifyProduct(Product prod)// prod contains new data
         {
+            //product contains old data
             var product = context.Products.Where(p => p.Id == prod.Id).SingleOrDefault();
             if (product != null)
             {

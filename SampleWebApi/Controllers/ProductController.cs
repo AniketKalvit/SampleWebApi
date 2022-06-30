@@ -19,11 +19,12 @@ namespace SampleWebApi.Controllers
            _prodservice = prodservice;
         }
         [HttpGet]
-        [Route("[action]")]
+       
         [Route("GetProducts")]
         public IActionResult GetProducts()
         {
             return new ObjectResult( _prodservice.GetAllProducts());
+            // test code
         }
         [HttpPost]
         [Route("AddProduct")]

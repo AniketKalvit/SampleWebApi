@@ -12,6 +12,7 @@ namespace SampleWebApi.Entities
         public RepositoriesContext(DbContextOptions options):base(options){ }
 
         public DbSet<Product> Products { get; set; }
-     
+
+        public DbSet<Employee> Employees { get; set; }
     }
 }
